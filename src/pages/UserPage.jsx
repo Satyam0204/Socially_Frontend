@@ -7,7 +7,7 @@ const UserPage = () => {
     let {authTokens}=useContext(Authcontext)
     let [profile,setProfile]=useState([])
     let [Posts,setPosts] = useState([])
-    let getProfile = async ()=>{
+    let myProfile = async ()=>{
         let response = await fetch('/api/user',{
             method:"GET",
             headers:{
@@ -33,7 +33,7 @@ const UserPage = () => {
     
       }
     useEffect(() => {
-        getProfile()
+        myProfile()
         getPosts()
     }, []);
   return (

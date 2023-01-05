@@ -12,6 +12,8 @@ import Header from './components/Header';
 import Register from "./pages/Register";
 import PostPage from "./pages/PostPage";
 import UserPage from "./pages/UserPage";
+import ProfilePage from "./pages/ProfilePage";
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
           <Route exact path='/' element={<PrivateRoute><Home/></PrivateRoute>}/>          
           <Route path='/post/:id' element={<PrivateRoute><PostPage/></PrivateRoute>}/>         
           <Route path='/user' element={<PrivateRoute><UserPage/></PrivateRoute>}/>         
+          <Route path='/profile/:id' element={<PrivateRoute><ProfilePage/></PrivateRoute>}/>         
           <Route path='/login' element={<Login />} />          
           <Route path='/register' element={<Register />} />          
 

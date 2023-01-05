@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import Authcontext from '../Contexts/Authcontext'
 import { useParams } from 'react-router-dom'
+import Like from '../components/Like'
+
 
 const PostPage = () => {
   let {authTokens}=useContext(Authcontext)
@@ -32,6 +34,7 @@ const PostPage = () => {
        <div>{post.desc}</div>
        <div>{post.datecreated}</div>
        <div>{post.like}</div>
+
     </div>
   )
 }

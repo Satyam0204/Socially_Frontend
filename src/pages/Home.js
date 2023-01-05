@@ -1,7 +1,9 @@
 import React from 'react'
 import {useState,useEffect, useContext } from 'react'
 import PostItem from '../components/PostItem'
+import Search from '../components/Search'
 import Authcontext from '../Contexts/Authcontext'
+
 
 const Home = () => {
   let {authTokens}=useContext(Authcontext)
@@ -31,6 +33,9 @@ const Home = () => {
   return (
     <div>
       <p>this is home page</p>
+      <div className="search">
+      <Search/>
+      </div>
       {Posts.map((post, index)=>(
       <PostItem key={index} post={post}/>
       ))}
