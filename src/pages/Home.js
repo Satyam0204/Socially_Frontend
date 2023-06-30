@@ -1,7 +1,6 @@
 import React from 'react'
 import {useState,useEffect, useContext } from 'react'
 import PostItem from '../components/PostItem'
-import Search from '../components/Search'
 import Authcontext from '../Contexts/Authcontext'
 
 
@@ -25,20 +24,22 @@ const Home = () => {
     })
       let data = await response.json()
       console.log("Post: ",data)
-      setPosts(data)
+      setPosts(data.reverse())
 
   }
 
 
   return (
-    <div>
+    <div className='border-black border-2 m-5' >
+      <div >
       <p>this is home page</p>
-      <div className="search">
-      <Search/>
-      </div>
+      </div >
+      <div className=''>
+
       {Posts.map((post, index)=>(
-      <PostItem key={index} post={post}/>
-      ))}
+        <PostItem key={index} post={post}/>
+        ))}
+    </div>
     </div>
   )
 }

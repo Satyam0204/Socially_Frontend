@@ -1,6 +1,8 @@
 import React ,{useContext} from 'react'
 import { Link } from 'react-router-dom'
 import Authcontext from '../Contexts/Authcontext'
+import Navbar from './Navbar/Navbar'
+import Search from './Search'
 
 
 const Header = () => {
@@ -26,6 +28,9 @@ const Header = () => {
       }
 
       {user && <p>Hello, {user.username}</p>}
+      <br/>
+      <Search/>
+
     </div>
   )
 }

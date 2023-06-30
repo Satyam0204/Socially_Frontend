@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import Authcontext from '../Contexts/Authcontext'
 import { useParams } from 'react-router-dom'
-import Like from '../components/Like'
+
 
 
 const PostPage = () => {
@@ -31,6 +31,7 @@ const PostPage = () => {
       <p>this is a post page</p>
 
        <div>{post.title}</div>
+       <img src={post.image} />
        <div>{post.desc}</div>
        <div>{post.datecreated}</div>
        <div>{post.like}</div>
